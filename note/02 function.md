@@ -58,6 +58,8 @@ Discussion Question 1:
 ## 2.3 Environment Diagrams
 ![image](https://user-images.githubusercontent.com/101033647/160550262-97674045-fb52-419b-84cd-04c1eaf6dabc.png)
 
+Environment: memories that keep tract of the bindings between names and values.
+
 注意 **Frame** 的含义：框架？体系？  
 解释器可视化过程：https://pythontutor.com/composingprograms.html#mode=edit
 
