@@ -60,7 +60,9 @@ Discussion Question 1:
 
 Environment: memories that keep tract of the bindings between names and values.
 
-注意 **Frame** 的含义：框架？体系？  
+注意 **Frame** 的含义：框架？体系？ 
+一个frame内name不能重复，被绑定唯一值
+
 解释器可视化过程：https://pythontutor.com/composingprograms.html#mode=edit
 
 ## 2.4 Defining Functions  
