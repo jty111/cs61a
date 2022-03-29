@@ -7,17 +7,63 @@
 区别：
 ![image](https://user-images.githubusercontent.com/101033647/160359465-898ff682-0d26-4c01-b04a-73de77a1428e.png)
 
-Discussion Question 1:  
-```
->>> f = min # min->f  
->>> f = max # max->f
->>> g, h = min, max 
->>> max = g #  f: max, g: min, h: max, max: min
->>> max(f(2, g(h(1, 5), 3)), 4)
-```
+
 
 ## 2.2 Names, Assignment, and User-Defined Functions
-略
+name: 
+> If a value has been given a name, we say that the name binds to the value.  
+> Names can also be bound to functions.  
+
+assignment 赋值
+> In Python, we can establish new bindings using the assignment statement, which contains a name to the left of = and a value to the right.  
+
+注意 **=** 的赋值意义，从右到左
+
+Discussion Question 1:  
+```
+>>> f=min
+>>> f
+<built-in function min>
+>>> f = max 
+>>> f
+<built-in function max>
+>>> g,h = min,max
+>>> g
+<built-in function min>
+>>> h
+<built-in function max>
+>>> max = g
+>>> g
+<built-in function min>
+>>> max
+<built-in function min>
+>>> f
+<built-in function max>
+>>> g
+<built-in function min>
+>>> h
+<built-in function max>
+>>> max(f(2, g(h(1, 5), 3)), 4)  
+3
+>>> h(1,5)
+5
+>>> g(h(1, 5), 3) 
+3
+>>> f(2, g(h(1, 5), 3))    
+3
+>>> max(f(2, g(h(1, 5), 3)), 4)
+3
+```
 
 ## 2.3 Environment Diagrams
+列表，不表
+![image](https://user-images.githubusercontent.com/101033647/160550262-97674045-fb52-419b-84cd-04c1eaf6dabc.png)
+
+## 2.4 Defining Functions  
+### def & assignment 区别：
+- def:  binds names to expressions  
+- assignment: binds names to values  
+![image](https://user-images.githubusercontent.com/101033647/160552269-8a2daa72-2ad7-4fd1-9476-ca5d405f9267.png)
+- signiture: 参数列表  
+- body: 函数体，应用函数时执行的计算
 
