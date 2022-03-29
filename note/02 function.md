@@ -103,4 +103,4 @@ signature的重要性：包含构建frame的信息（参数性质？）
 > A name evaluates to the value bound to that name in the earliest frame of the current environment in which that name is found.      
  
 某name的计算值，是**最初**建立框架（定义 define function）在现有环境（参数赋值 bind formal parameters to its arguments）的运行结果
-关于最初的理解，可以去看reading 1.3.3   Example: Calling a User-Defined Function 里的动态例子
+\*关于最初的理解，可以去看reading 1.3.3   Example: Calling a User-Defined Function 里的动态例子  http://composingprograms.com/pages/13-defining-new-functions.html
