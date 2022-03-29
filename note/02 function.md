@@ -86,11 +86,16 @@ signature的重要性：包含构建frame的信息（参数性质？）
 ### Looking Up Names In Environments  
 现有环境：
 - global frame
-- local frame + global frame, local frame 具有查找优先级  
+- local frame + global frame    
+*local frame调用后才产生 具有查找优先级* 
 
-> An environment is a sequence of frames.  
+
+> An environment is a sequence of frames.     
+
 框架搭建下成立环境
 
-> A name evaluates to the value bound to that name in the earliest frame of the current environment in which that name is found.   
+
+> A name evaluates to the value bound to that name in the earliest frame of the current environment in which that name is found.      
+
 怎么理解... 
-某name的计算值，是最初建立框架（定义 bind function）在现有环境（参数赋值 bind formal parameters to its arguments）
+某name的计算值，是最初建立框架（定义 define function）在现有环境（参数赋值 bind formal parameters to its arguments）的运行结果
