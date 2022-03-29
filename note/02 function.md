@@ -56,14 +56,41 @@ Discussion Question 1:
 ```
 
 ## 2.3 Environment Diagrams
-列表，不表
 ![image](https://user-images.githubusercontent.com/101033647/160550262-97674045-fb52-419b-84cd-04c1eaf6dabc.png)
+
+注意 **Frame** 的含义：框架？体系？  
+解释器可视化过程：https://pythontutor.com/composingprograms.html#mode=edit
 
 ## 2.4 Defining Functions  
 ### def & assignment 区别：
 - def:  binds names to expressions  
 - assignment: binds names to values  
+
 ![image](https://user-images.githubusercontent.com/101033647/160552269-8a2daa72-2ad7-4fd1-9476-ca5d405f9267.png)
 - signiture: 参数列表  
 - body: 函数体，应用函数时执行的计算
 
+### Calling/applying user-def funtions
+在定义时，function本身并没有执行，需要调用  
+
+调用步骤：
+1. Add a local frame, forming a new environment **建立本地框架新环境**
+2. Bind the function's formal parameters to its arguments in that frame 实参绑定形参
+3. Execute the body of the function in that new environment 在新环境中执行  
+
+![image](https://user-images.githubusercontent.com/101033647/160562877-fe85d886-c2a1-456e-8bd5-f1094e6efcf5.png)
+
+signature的重要性：包含构建frame的信息（参数性质？）
+> A function’s signature has all the information needed to create a local frame  
+
+### Looking Up Names In Environments  
+现有环境：
+- global frame
+- local frame + global frame, local frame 具有查找优先级  
+
+> An environment is a sequence of frames.  
+框架搭建下成立环境
+
+> A name evaluates to the value bound to that name in the earliest frame of the current environment in which that name is found.   
+怎么理解... 
+某name的计算值，是最初建立框架（定义 bind function）在现有环境（参数赋值 bind formal parameters to its arguments）
