@@ -58,7 +58,7 @@ Discussion Question 1:
 ## 2.3 Environment Diagrams
 ![image](https://user-images.githubusercontent.com/101033647/160550262-97674045-fb52-419b-84cd-04c1eaf6dabc.png)
 
-Environment: memories that keep tract of the bindings between names and values.
+Environment: memories that keep tract of the bindings between names and values.  interpretor 内部 track what the name meet.
 
 注意 **Frame** 的含义：框架？体系？ 
 一个frame内name不能重复，被绑定唯一值
